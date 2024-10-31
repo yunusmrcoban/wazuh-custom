@@ -1,0 +1,63 @@
+<decoder name="custom-signIns-decoder">
+    <prematch>EntraIDSignIns=</prematch>
+</decoder>
+<decoder name="custom-signIns-decoder-child">
+  <parent>custom-signIns-decoder</parent>
+  <regex>Situation=(\.*)\s</regex>
+  <order>Situation</order>
+</decoder>
+<decoder name="custom-signIns-decoder-child">
+  <parent>custom-signIns-decoder</parent>
+  <regex>IP=(\.*)\s</regex>
+  <order>srcip</order>
+</decoder>
+<decoder name="custom-signIns-decoder-child">
+  <parent>custom-signIns-decoder</parent>
+  <regex>User=(\.*)\s</regex>
+  <order>srcuser</order>
+</decoder>
+<decoder name="custom-signIns-decoder-child">
+  <parent>custom-signIns-decoder</parent>
+  <regex>Location=(\.*)\s(\.*)\s</regex>
+  <order>city_name, country_name</order>
+</decoder>
+<decoder name="custom-signIns-decoder-child">
+  <parent>custom-signIns-decoder</parent>
+  <regex>Device=\s</regex>
+  <order>Device</order>
+</decoder>
+<decoder name="custom-signIns-decoder-child">
+  <parent>custom-signIns-decoder</parent>
+  <regex>OS=(\.*)\s</regex>
+  <order>os.name</order>
+</decoder>
+<decoder name="custom-signIns-decoder-child">
+  <parent>custom-signIns-decoder</parent>
+  <regex>UserType=(\.*)\s</regex>
+  <order>Usrtype</order>
+</decoder>
+<decoder name="custom-signIns-decoder-child">
+  <parent>custom-signIns-decoder</parent>
+  <regex>CAStatus=(\.*)\s</regex>
+  <order>CAStatus</order>
+</decoder>
+<decoder name="custom-signIns-decoder-child">
+  <parent>custom-signIns-decoder</parent>
+  <regex>AppliedPolicies='(\.*)'\s</regex>
+  <order>appliedConditionalAccessPolicies</order>
+</decoder>
+<decoder name="custom-signIns-decoder-child">
+  <parent>custom-signIns-decoder</parent>
+  <regex>Application='(\.*)'\s</regex>
+  <order>appDisplayName</order>
+</decoder>
+<decoder name="custom-signIns-decoder-child">
+  <parent>custom-signIns-decoder</parent>
+  <regex>Browser='(\.*)'\s</regex>
+  <order>Browser</order>
+</decoder>
+<decoder name="custom-signIns-decoder-child">
+  <parent>custom-signIns-decoder</parent>
+  <regex>Interactive=(\.*)</regex>
+  <order>Interactive</order>
+</decoder>
