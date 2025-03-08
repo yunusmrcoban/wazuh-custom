@@ -77,7 +77,7 @@ try:
                     # Write each log as a single line JSON
                     f.write(json.dumps(enriched_log) + "\n")
 
-            logger.info("Logs saved to 'audit_logs.json' in JSONL format.")
+            logger.info("Logs saved to 'AzureDevops_Audit_logs.json' in JSONL format.")
             
         except ValueError as e:
             logger.error(f"Response is not in JSON format. Error: {e}")
