@@ -11,7 +11,7 @@
     <rule id="100702" level="8">
         <if_sid>100701</if_sid>
         <field name="AzureDevops.ActionId">Security.ModifyAccessControlLists</field>
-        <field name="AzureDevops.PermissionNames">.*Administer library item.*</field>
+        <match>Administer library item</match>
         <description>Azure DevOps: Security Permission Modified (Administer library item) - Action: $(AzureDevops.ActionId), Actor: $(AzureDevops.ActorUPN), Permissions: $(AzureDevops.PermissionNames), Details: $(AzureDevops.Details)</description>
     </rule>
 
